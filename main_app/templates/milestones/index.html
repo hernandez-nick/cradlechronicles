@@ -1,40 +1,32 @@
 {% extends 'base.html' %} {% load static %} {% block head %}
-<link
-  rel="stylesheet"
-  href="{% static 'css/milestones/milestones-index.css' %}"
-/>
-{% endblock %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/milestones/index.css' %}" />{% endblock %}
+{% block content %}
+<section class="timeline-wrap">
+    <div class="timeline-head">
+        <div>
+        <h1>Welcome back, {{ user.username }}!</h1>
+        <p class="count">{{ milestones.count }} milestone{{ milestones.count|pluralize }} recorded</p>
+        </div>
+        <a href="{% url 'milestone-create' %}" class="btn primary">＋ Add Milestone</a>
+    </div>
 
-<section class="card-container">
+    <p class="timeline-label">TIMELINE</p>
+
     {% for milestone in milestones %}
-        <div class="card">
-        <a href="{% url 'milestone-detail' milestone.id %}">
-            <div class="card-content">
-            <div class="card-img-container">
-                <img
-                src="{% static 'images/milestone-default.jpg' %}"
-                alt="{{ milestone.title }}"
-                />
+        <article class="milestone-card" data-cat="{{ milestone.category }}">
+        <div class="star">★</div>
+        <div class="milestone-body">
+            <p class="meta">{{ milestone.date|date:"F j, Y" }} · {{ milestone.category }}</p>
+            <h2>{{ milestone.title }}</h2>
+            <p class="desc">"{{ milestone.description }}"</p>
+            <div class="card-actions">
+            <a href="{% url 'milestone-update' milestone.id %}" class="btn secondary small">✎ Edit</a>
+            <a href="{% url 'milestone-delete' milestone.id %}" class="btn secondary small">🗑 Delete</a>
             </div>
-            <h2 class="card-title">{{ milestone.title }}</h2>
-            <p>{{ milestone.description }}</p>
-            </div>
-        </a>
         </div>
+        </article>
+    {% empty %}
+        <p class="empty">No milestones yet. Capture your first memory!</p>
     {% endfor %}
 </section>
-
 {% endblock %}
-
-            {% comment %} {% else %}
-            <p> {{ milestone.title }} </p>
-            {% endif %}
-            <p><small>{{ milestone.description }}</small></p>
-            </div>
-        </a>
-        </div>
-    {% endfor %}
-</section>
-
-
-{% endblock %} {% endcomment %}

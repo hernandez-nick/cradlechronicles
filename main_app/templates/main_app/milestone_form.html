@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}<link rel="stylesheet" href="{% static 'css/form.css' %}" />{% endblock %}
+{% block content %}
+<section class="form-wrap">
+  <a class="back" href="{% url 'milestone-index' %}">← Back to Timeline</a>
+  {% if object %}
+    <h1>Edit Milestone</h1>
+    <p class="sub">Refine the memory.</p>
+  {% else %}
+    <h1>Capture a New Milestone</h1>
+    <p class="sub">Every first deserves a place in the chronicle.</p>
+  {% endif %}
+
+  <form method="post" class="form-card">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit" class="btn primary">Save Memory</button>
+      <a href="{% url 'milestone-index' %}" class="btn secondary">Cancel</a>
+    </div>
+  </form>
+</section>
+{% endblock %}
