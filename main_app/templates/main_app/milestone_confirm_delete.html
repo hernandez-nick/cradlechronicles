@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}<link rel="stylesheet" href="{% static 'css/form.css' %}" />{% endblock %}
+{% block content %}
+<section class="form-wrap">
+  <h1>Delete this milestone?</h1>
+  <div class="form-card">
+    <p class="sub">"{{ object.title }}" — {{ object.date|date:"F j, Y" }}</p>
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-actions">
+        <button type="submit" class="btn primary">Yes, delete</button>
+        <a href="{% url 'milestone-index' %}" class="btn secondary">Cancel</a>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}

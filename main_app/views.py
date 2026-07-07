@@ -18,6 +18,14 @@ class MilestoneCreate(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+    
+class MilestoneUpdate(LoginRequiredMixin, UpdateView):
+    model = Milestone
+    fields = ['title', 'date', 'category', 'description']
+
+class MilestoneDelete(LoginRequiredMixin, DeleteView):
+    model = Milestone
+    success_url = '/milestones/'
 
 def signup(request):
     error_message = ''
