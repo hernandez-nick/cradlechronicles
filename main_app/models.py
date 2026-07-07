@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 CATEGORIES = (
     ('Physical', 'Physical'),
@@ -15,7 +16,7 @@ class Milestone(models.Model):
     date = models.DateField()
     category = models.CharField(max_length=100, choices=CATEGORIES)
     description = models.TextField(max_length=500)
-
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='milestones')
     class Meta:
         ordering = ['-date']
 
