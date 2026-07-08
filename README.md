@@ -14,7 +14,7 @@
 
 [GitHub](https://github.com/hernandez-nick/cradlechronicles)
 
-[Deployed project link]()
+[Deployed project link](https://cradlechronicles-7adf180b336b.herokuapp.com/)
 
 ## Technologies Used
 
@@ -38,3 +38,4 @@
 - If I have multiple kids, I want to switch between different child profiles, so that their milestones stay organized separately.
 - I want to attach a photo to a milestone entry, so that I can visually preserve the memory.
 - I want to filter milestones by category or search by keyword, so that I can quickly find specific memories.
+- I want to have a resources library, so there are helpful links I can access easily.
