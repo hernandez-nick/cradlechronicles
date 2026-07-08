@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+
 class Home(LoginView):
     template_name = 'home.html'
 

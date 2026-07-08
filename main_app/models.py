@@ -24,4 +24,4 @@ class Milestone(models.Model):
         return self.title
     
     def get_absolute_url(self):
-        return reverse('milestone_index')
+        return reverse('milestone-index')

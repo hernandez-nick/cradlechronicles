@@ -119,6 +119,6 @@ STATIC_URL = 'static/'
 
 LOGIN_URL = 'home'
 
-LOGIN_REDIRECT_URL = 'milestones-index'
+LOGIN_REDIRECT_URL = 'milestone-index'
 
 LOGOUT_REDIRECT_URL = 'home'
