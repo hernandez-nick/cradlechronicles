@@ -1,6 +1,6 @@
 # Cradle Chronicles
 
-![Cradle Chronicles](https://ibb.co/Y7LfDj9H)
+![Cradle Chronicles]('https://ibb.co/Y7LfDj9H')
 
 ## Description
 
