@@ -1,6 +1,8 @@
 # Cradle Chronicles
 
 ![Cradle Chronicles](https://i.ibb.co/5WRsYcDb/Image-7-7-26-at-5-20-PM.png)
+![Cradle Chronicles - Index](https://i.ibb.co/pjyJb90k/Image-7-7-26-at-5-50-PM.png)
+![Cradle Chronicles - Create](https://i.ibb.co/twxLTdnm/Screenshot-2026-07-07-at-5-51-56-PM.png)
 
 ## Description
 
@@ -33,4 +35,6 @@
 
 ## Next Steps
 
-- 
+- If I have multiple kids, I want to switch between different child profiles, so that their milestones stay organized separately.
+- I want to attach a photo to a milestone entry, so that I can visually preserve the memory.
+- I want to filter milestones by category or search by keyword, so that I can quickly find specific memories.
